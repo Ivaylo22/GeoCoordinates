@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">GeoCoordinates</string>
+    <string name="select_input_systems">Select Input Coordinate and Height Systems</string>
+    <string name="select_output_systems">Select Output Coordinate and Height Systems</string>
+    <string name="enter_x_coordinate">Enter X Coordinate</string>
+    <string name="enter_y_coordinate">Enter Y Coordinate</string>
+    <string name="enter_height">Enter Height</string>
+    <string name="transform">Transform</string>
+    <string name="back">Назад</string>
+    <string name="start_transformation">Start Transformation</string>
+    <string name="input_coordinate">Входна координатна система</string>
+    <string name="coordinate_bgs_2005">БГС 2005</string>
+    <string name="coordinate_ks_1970">КС 1970</string>
+    <string name="coordinate_sub_k3">К3</string>
+    <string name="coordinate_sub_k5">К5</string>
+    <string name="coordinate_sub_k7">К7</string>
+    <string name="coordinate_sub_k9">К9</string>
+    <string name="input_height_system">Входна височинна система</string>
+    <string name="height_geodezichni">Геодезични височини</string>
+    <string name="height_evrs_2007">EVRS 2007</string>
+    <string name="height_baltiiska">Балтийска система</string>
+    <string name="output_coordinate">Изходна координатна система</string>
+    <string name="output_height">Изходна височинна система</string>
+    <string name="forward">Напред</string>
+    <string name="calculate">Изчисли</string>
+    <string name="camera">Камера</string>
+    <string name="coordinate_x">X координата</string>
+    <string name="coordinate_y">Y координата</string>
+    <string name="height">Височина</string>
+</resources>
