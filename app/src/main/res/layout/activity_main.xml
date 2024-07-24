@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Input Coordinate System Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/input_coordinate"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_input_coordinate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_bgs_2005"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onInputCoordinateSystemClicked"
+                android:padding="16dp"
+                android:text="@string/coordinate_bgs_2005"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_ks_1970"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onInputCoordinateSystemClicked"
+                android:padding="16dp"
+                android:text="@string/coordinate_ks_1970"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layout_ks_1970_suboptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/radio_group_ks_1970_suboptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <RadioButton
+                    android:id="@+id/radio_k3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onInputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k3"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_k5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onInputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k5"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_k7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onInputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k7"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_k9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onInputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k9"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Input Height System Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/input_height_system"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_input_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_geodetic_heights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onInputHeightSystemClicked"
+                android:padding="16dp"
+                android:text="@string/height_geodezichni"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_evrs_2007"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onInputHeightSystemClicked"
+                android:padding="16dp"
+                android:text="@string/height_evrs_2007"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/radio_baltic_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onInputHeightSystemClicked"
+                android:padding="16dp"
+                android:text="@string/height_baltiiska"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <!-- Output Coordinate System Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/output_coordinate"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_output_coordinate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_output_bgs_2005"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onOutputCoordinateSystemClicked"
+                android:padding="16dp"
+                android:text="@string/coordinate_bgs_2005"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_output_ks_1970"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onOutputCoordinateSystemClicked"
+                android:padding="16dp"
+                android:text="@string/coordinate_ks_1970"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layout_output_ks_1970_suboptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/radio_group_output_ks_1970_suboptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_output_k3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onOutputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k3"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_output_k5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onOutputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k5"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_output_k7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onOutputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k7"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_output_k9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:button="@null"
+                    android:onClick="onOutputSubCoordinateSystemClicked"
+                    android:padding="16dp"
+                    android:text="@string/coordinate_sub_k9"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Output Height System Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/output_height"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_output_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_output_geodetic_heights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onOutputHeightSystemClicked"
+                android:padding="16dp"
+                android:text="@string/height_geodezichni"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_output_evrs_2007"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onOutputHeightSystemClicked"
+                android:padding="16dp"
+                android:text="@string/height_evrs_2007"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_output_baltic_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_background"
+                android:button="@null"
+                android:onClick="onOutputHeightSystemClicked"
+                android:padding="16dp"
+                android:text="@string/height_baltiiska"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <!-- Start Transformation Button -->
+        <Button
+            android:id="@+id/btn_start_transformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startTransformation"
+            android:text="@string/forward"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>
